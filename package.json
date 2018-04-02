@@ -1,0 +1,20 @@
+{
+  "name": "angularjs_with_tests_experiments",
+  "version": "1.0.0",
+  "description": "Implementing test for AngularJS project",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --history-api-fallback",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sergey Mell",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.6.9"
+  },
+  "devDependencies": {
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.1"
+  }
+}

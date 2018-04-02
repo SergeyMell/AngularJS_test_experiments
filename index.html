@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="core" ng-strict-di>
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS :: Experiments with tests</title>
+</head>
+<body ng-controller="DashboardController as vm">
+
+<ol>
+    <li ng-repeat="user in vm.model.users track by user.id">{{::user.name}}</li>
+</ol>
+
+
+<script src="bundle.js"></script>
+</body>
+</html>
