@@ -1,6 +1,7 @@
 describe('Dashboard Controller', function() {
 
     let $ctrl, $httpBackend;
+    const userMock = require('../mocks/users');
 
     beforeEach(function() {
         angular.mock.module('core');
@@ -11,7 +12,7 @@ describe('Dashboard Controller', function() {
         $httpBackend = $injector.get('$httpBackend');
 
         $httpBackend.when('GET', 'https://jsonplaceholder.typicode.com/users')
-            .respond([{name: 'Sergey'}]);
+            .respond(userMock);
     }));
 
     it('initial state', function() {
@@ -24,7 +25,7 @@ describe('Dashboard Controller', function() {
         const d = $ctrl('DashboardController', {});
         $httpBackend.flush();
 
-        expect(d.model.users[0].name).toBe('Sergey');
+        expect(d.model.users[0].name).toBe('Sergey Mell');
     });
 
 });
